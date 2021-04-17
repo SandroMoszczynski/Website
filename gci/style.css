@@ -185,16 +185,43 @@ footer .container {
   margin-bottom: 10px;
   border: 2px solid #333333; 
 }
+ .supporting li{
+  font-size: 20px;
+  list-style-type: none;
+ }
 
 .container_grid_cv{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 50px;
+  padding: 50px 10px;
   text-align: center;
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-row: auto;
   justify-content: center;
+}
+
+.container_grid_cv_2{
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 50px 10px;
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr 5fr;
+  grid-row: auto;
+  justify-content: center;
+}
+
+.container_grid_cv_2 .sub-item{
+  height: 200px;
+}
+
+#skill_titles{
+  font-size: 30px;
+}
+
+.container_grid_cv_2{
+  font-size: 15px;
 }
 
 @media (max-width: 500px) {
