@@ -15,7 +15,7 @@ html, body {
     padding: 20px 0;
   }
 
-  nav ul {
+  ul {
     margin: 30px auto;
     padding: 0 20px;
     text-align: center;
@@ -30,9 +30,8 @@ html, body {
     width: 80px;
   }
 
-  nav a {
-    text-decoration: none;
-    color: inherit;
+  nav a:visited {
+    color: white;
   }
   
 
