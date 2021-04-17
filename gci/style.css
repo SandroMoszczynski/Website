@@ -63,6 +63,12 @@ main h1 {
   text-transform: uppercase;
 }
 
+main .jumbotron p {
+  max-width: 900px;
+  text-align: center;
+  margin: auto;
+}
+
 footer {
   position: bottom;
   width:100%;
@@ -77,12 +83,7 @@ footer p {
   font-size: 11px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 10px;
-  text-align: center;
-}
+
 
 footer .container {
   max-width: 900px;
@@ -190,10 +191,29 @@ footer .container {
   margin-bottom: 10px;
   border: 2px solid #333333; 
 }
- .supporting li{
+
+#normal_link{
+  color: rgb(49, 46, 46);
+  text-decoration: none;
+}
+
+.supporting li{
   font-size: 20px;
   list-style-type: none;
  }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.container .p_thinner{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
 
 .container_grid_cv{
   max-width: 1200px;
@@ -236,7 +256,7 @@ footer .container {
     padding: 0 40px;
   }
 
-  .supporting .col {
+.supporting .col {
     width: 100%;
   }
 }
