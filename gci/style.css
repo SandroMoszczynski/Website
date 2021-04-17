@@ -15,6 +15,11 @@ nav {
   padding: 10px 0;
 }
 
+a {
+  color: rgb(49, 46, 46);
+  text-decoration: none;
+}
+
 nav ul {
   margin: 10px auto;
   padding: 0 20px;
@@ -178,7 +183,7 @@ footer .container {
   margin-bottom: 20px;
 }
 
-.supporting a {
+.col a {
   background-color: white;
   color: #333333;
   font-family: 'Raleway', sans-serif;
@@ -192,18 +197,13 @@ footer .container {
   border: 2px solid #333333; 
 }
 
-#normal_link{
-  color: rgb(49, 46, 46);
-  text-decoration: none;
-}
-
 .supporting li{
   font-size: 20px;
   list-style-type: none;
  }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
   text-align: center;
@@ -239,6 +239,43 @@ footer .container {
 
 .container_grid_cv_2 .sub-item{
   height: 200px;
+  width: 400px;
+}
+
+.container_grid_codingeg{
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 50px 10px;
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-row: auto;
+  justify-content: center;
+}
+
+.container_grid_codingeg h4{
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: none;
+  text-align: center;
+}
+
+.container_grid_codingeg .sub-item{
+  height: 50px;
+}
+
+.container_grid_codingeg a {
+  background-color: white;
+  color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #333333; 
 }
 
 #skill_titles{
