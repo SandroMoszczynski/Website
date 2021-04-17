@@ -150,6 +150,20 @@ footer .container {
   text-align: center;
 }
 
+.supporting h3 {
+  font-weight: 600;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.supporting h4 {
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .supporting p {
   font-weight: 400;
   font-size: 14px;
@@ -173,14 +187,13 @@ footer .container {
 }
 
 .container_grid_cv{
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 50px;
+  padding: 50px 50px;
   text-align: center;
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-row: auto;
-  
 }
 
 @media (max-width: 500px) {
