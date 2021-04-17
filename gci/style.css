@@ -15,7 +15,7 @@ nav {
   padding: 10px 0;
 }
 
-ul {
+nav ul {
   margin: 10px auto;
   padding: 0 20px;
   display: flex;
@@ -44,6 +44,7 @@ main {
   text-align: center;
   position:relative;
   top: 80px;
+  font-family: 'Raleway', sans-serif;
 }
 
 main h1 {
@@ -58,6 +59,9 @@ main h1 {
 }
 
 footer {
+  position:fixed;
+  width:100%;
+  z-index:10;
   margin-top: 20px;
   background-color: #333;
   color: #fff;
