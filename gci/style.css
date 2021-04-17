@@ -13,13 +13,15 @@ html, body {
   nav {
     margin: 0;
     padding: 20px 0;
-    text-align: center;
   }
 
   ul {
     margin: 30px auto;
     padding: 0 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   nav li {
