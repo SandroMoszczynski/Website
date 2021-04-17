@@ -65,23 +65,29 @@ footer {
 
 footer p {
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
   font-size: 11px;
 }
 
 .container {
-  max-width: 940px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 10px;
   text-align: center;
 }
 
 .jumbotron {
-  height: 800px;
+  height: 500px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin-bottom: 10px;
+}
+
+.jumbotron p {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .btn-main {
@@ -108,13 +114,15 @@ footer p {
 }
 
 .supporting {
+  margin-top: 50px;
   padding-top: 80px;
-  padding-bottom: 100px;
+  padding-bottom: 50px; 
 }
 
 .supporting .col {
   font-family: 'Raleway', sans-serif;
-  text-align: center;
+  position: top;
+  text-align: top;
   display:inline-block;
   width: 200px;
 }
