@@ -14,6 +14,13 @@ html, body {
     margin: 0;
     padding: 20px 0;
   }
+
+  nav ul{
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
   
   nav li {
     color: #fff;
@@ -144,4 +151,8 @@ html, body {
     .supporting .col {
       width: 100%;
     }
+  }
+  
+  a:visited {
+    color: white;
   }
