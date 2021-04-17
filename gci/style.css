@@ -188,12 +188,13 @@ footer .container {
 
 .container_grid_cv{
   max-width: 1200px;
-  margin: 0 50px;
+  margin: 0 auto;
   padding: 50px 50px;
   text-align: center;
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-row: auto;
+  justify-content: center;
 }
 
 @media (max-width: 500px) {
