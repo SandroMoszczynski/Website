@@ -15,17 +15,12 @@ html, body {
     padding: 20px 0;
   }
 
-  nav ul{
+  nav ul {
     margin: 30px auto;
     padding: 0 20px;
     text-align: center;
   }
 
-  nav a:visited {
-    color: white;
-  }
-
-  
   nav li {
     color: #fff;
     font-family: 'Raleway', sans-serif;
@@ -34,7 +29,13 @@ html, body {
     display: inline-block;
     width: 80px;
   }
+
+  nav a {
+    text-decoration: none;
+    color: inherit;
+  }
   
+
   main {
     text-align: center;
     position:relative;
