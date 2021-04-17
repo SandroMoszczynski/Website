@@ -39,6 +39,11 @@ nav a {
   text-decoration: none;
 }
 
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
 
 main {
   text-align: center;
