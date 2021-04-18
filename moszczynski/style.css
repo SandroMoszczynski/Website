@@ -327,7 +327,14 @@ footer .container {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: center;
+  text-align: left;
+}
+
+.left-box img {
+  width: 600px;
+  margin: 0 auto;
+  height: 500px;
+  align-self: right;
 }
 
 .right-box {
@@ -341,5 +348,12 @@ footer .container {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: center;
+  text-align: right;
+}
+
+.right-box img {
+  width: 600px;
+  margin: 0 auto;
+  height: 500px;
+  align-self: left;
 }
