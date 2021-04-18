@@ -217,6 +217,12 @@ footer .container {
   text-align: center;
 }
 
+.container .p_thinner_2{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .container_grid_cv{
   max-width: 1200px;
   margin: 0 auto;
