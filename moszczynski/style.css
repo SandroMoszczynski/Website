@@ -315,3 +315,31 @@ footer .container {
     width: 100%;
   }
 }
+
+.left-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.left-box p {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.right-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: right;
+}
+
+.right-box p {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: right;
+}
