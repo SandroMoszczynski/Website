@@ -320,26 +320,26 @@ footer .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .left-box p {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .right-box {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: right;
+  text-align: center;
 }
 
 .right-box p {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 10px;
-  text-align: right;
+  text-align: center;
 }
