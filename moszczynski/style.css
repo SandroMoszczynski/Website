@@ -250,6 +250,7 @@ footer .container {
   grid-template-columns: 1fr 3fr 1fr;
   grid-row: auto;
   justify-content: center;
+  border: 2px solid #333333; 
 }
 
 .container_grid_codingeg h4{
@@ -260,7 +261,8 @@ footer .container {
 }
 
 .container_grid_codingeg .sub-item{
-  height: 50px;
+  height: 150px;
+  margin: 5px 5px;
 }
 
 .container_grid_codingeg a {
