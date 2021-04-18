@@ -335,17 +335,21 @@ footer .container {
 }
 
 .left-box img {
-  width: 1200px;
+  width: 800px;
   margin: 0 auto;
-  height: 900px;
+  height: 700px;
   align-self: right;
 }
 
 .right-box {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 50px 10px;
   text-align: center;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  grid-row: auto;
+  justify-content: center;
 }
 
 .right-box p {
@@ -356,7 +360,7 @@ footer .container {
 }
 
 .right-box img {
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
   height: 500px;
   align-self: left;
