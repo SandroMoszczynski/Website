@@ -450,3 +450,51 @@ footer .container {
   border: 2px solid #333333; 
   border-radius: 10px;
 }
+
+.container_grid_index {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 10px;
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: auto;
+  justify-content: center;
+  border: 2px solid #333333; 
+  border-radius: 10px;
+}
+
+.container_grid_index a {
+  background-color: white;
+  color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #333333; 
+  border-radius: 5px;
+}
+
+.container_grid_index .sub-item-t {
+  border: 1px solid white; 
+  height: 50px;
+}
+
+.container_grid_index .sub-item-p {
+  border: 1px solid white; 
+  height: 150px;
+}
+
+.container_grid_index .sub-item-l {
+  border: 1px solid white; 
+  height: 50px;
+}
+
+.container_grid_index .sub-item-s {
+  border: 1px solid white; 
+  height: 90px;
+}
