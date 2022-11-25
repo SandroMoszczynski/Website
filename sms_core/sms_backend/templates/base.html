@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block links %}
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <link href="{% static 'style.css' %}" rel='stylesheet' type='text/css'/>
+    {% endblock %}
+</head>
+
+<body>
+{% block header %}
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'sms_backend:index' %}" >Home</a></li>
+            <li><a href="{% url 'sms_backend:about' %}" >About me</a></li> 
+            <li><a href="{% url 'sms_backend:cv' %}" > Online CV</a></li>
+            <li><a href="{% url 'sms_backend:programming' %}" >Programming</a></li>
+            <li><a href="{% url 'sms_backend:hobbies' %}" >Hobbies</a></li> 
+            <li><a href="{% url 'sms_backend:python_project' %}" > Python Project </a></li> 
+            <li><a href="{% url 'sms_backend:cpp_project' %}" > C++ Project </a></li>
+        </ul>
+    </nav>
+</header>
+
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block footer %}
+
+<footer>
+    <div class="container">
+        <p>&copy; Contact info; Email: <a href = "mailto: sandromarcus@hotmail.co.uk">sandromarcus@hotmail.co.uk</p>
+    </div>
+</footer>
+
+{% endblock %}
+
+</body>
+</html>

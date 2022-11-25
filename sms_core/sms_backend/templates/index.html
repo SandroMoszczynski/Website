@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
-    <link href='style.css' rel='stylesheet' type='text/css'/>
-  </head>
+{% extends "base.html" %}
+{% load static %}
 
-  <body>
-    
-    <header>
-        <nav>
-          <ul>
-            <li><a href="./index.html" >Home</a></li>
-            <li><a href="./about_me.html" >About me</a></li> 
-            <li><a href="./cv_employment.html" > Online CV</a></li>
-            <li><a href="./programming.html" >Programming</a></li>
-            <li><a href="./hobbies.html" >Hobbies</a></li> 
-            <li><a href="./python_project.html" > Python Project </a></li> 
-            <li><a href="./c++_project.html" > C++ Project </a></li>
-          </ul>
-        </nav>
-    </header>
+{% block content %}
 
     <main>
       <div class="jumbotron">
@@ -28,7 +9,7 @@
           <h1>Website of Sandro Moszczynski </h1>
           <p>I created this website from scratch to showcase my talents and achievements. Clicking below will start you on a tour of each page in the website.</p>
           <br>
-          <a href="./about_me.html" class="btn-main"> Start the tour </a>
+          <a href="{% url 'sms_backend:about' %}" class="btn-main"> Start the tour </a>
         </div>
       <p>Alternatively, you can directly go to any page from either the nav menu at the top or by clicking one of the pages below.</p> 
       </div>
@@ -45,7 +26,7 @@
             <p>This is a brief introduction to me and my past. Including the "broad strokes" history of my life.</p> 
           </div>
           <div class="sub-item-l">
-            <a href="./about_me.html"> Learn More</a>
+            <a href="{% url 'sms_backend:about' %}"> Learn More</a>
           </div>
 
           <div class="sub-item-s"></div>
@@ -57,7 +38,7 @@
             <p>A brief section devoted to my non-professional interests. These include cooking, building computers, other artistic and creative outlets, gaming and sports.</p>
           </div>          
           <div class="sub-item-l">
-            <a href="./hobbies.html"> Learn More</a>            
+            <a href="{% url 'sms_backend:hobbies' %}"> Learn More</a>            
           </div>         
         </div>
 
@@ -69,7 +50,7 @@
             <p>This is where you will find all information on my professional and academic achievements as well as any skills I feel are relevant to any future employers.</p>
           </div>
           <div class="sub-item-l">
-            <a href="./cv_employment.html"> Learn More</a>
+            <a href="{% url 'sms_backend:cv' %}"> Learn More</a>
           </div>
           
           <div class="sub-item-s"></div>
@@ -81,7 +62,7 @@
             <p>An as yet unnamed project written in Python. It will use a machine learning algorithm to trawl clothes and fashion site and determine the best clothing options for a person. </p>
           </div>
           <div class="sub-item-l">
-            <a href="./python_project.html"> Learn More</a>
+            <a href="{% url 'sms_backend:python_project' %}"> Learn More</a>
           </div>
         </div>
     
@@ -94,7 +75,7 @@
             <p>This contains links to my Github, Codeacademy and Hacker rank pages as well as details of what each of the projects listed in Github contain and other programming tasks completed.</p>
           </div>          
           <div class="sub-item-l">
-            <a href="./programming.html"> Learn More</a>      
+            <a href="{% url 'sms_backend:programming' %}"> Learn More</a>      
           </div> 
           
           <div class="sub-item-s"></div>
@@ -106,18 +87,11 @@
             <p>An as yet unnamed project written in C++. This will take the form of a crude Minecraft clone written in C++. Details of versions can also be found here.</p>
           </div>          
           <div class="sub-item-l">
-            <a href="./c++_project.html"> Learn More</a>           
+            <a href="{% url 'sms_backend:cpp_project' %}"> Learn More</a>           
           </div>         
         </div>
       </div>
 
     </section>
 
-    <footer>
-      <div class="container">
-        <p>&copy; Contact info; Email: <a href = "mailto: sandromarcus@hotmail.co.uk">sandromarcus@hotmail.co.uk</p>
-      </div>
-    </footer>
-    
-  </body>
-</html>
+{% endblock %}

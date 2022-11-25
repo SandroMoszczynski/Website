@@ -1,33 +1,14 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
-    <link href='style.css' rel='stylesheet' type='text/css'/>
-  </head>
+{% extends "base.html" %}
+{% load static %}
 
-  <body>
-    
-  <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html" >Home</a></li>
-          <li><a href="./about_me.html" >About me</a></li> 
-          <li><a href="./cv_employment.html" > Online CV</a></li>
-          <li><a href="./programming.html" >Programming</a></li>
-          <li><a href="./hobbies.html" >Hobbies</a></li> 
-          <li><a href="./python_project.html" > Python Project </a></li> 
-          <li><a href="./c++_project.html" > C++ Project </a></li>
-        </ul>
-      </nav>
-  </header>
+{% block content %}
 
   <main>
       <div class="jumbotron">
         <div class="container">  
           <h1>About Me </h1>
           <p>Here you will find a brief summary of my life so far.</p><br>
-          <a href="./cv_employment.html" class="btn-main"> Next Page</a>
+          <a href="{% url 'sms_backend:cv' %}" class="btn-main"> Next Page</a>
         </div>
       </div>  
   </main>
@@ -53,7 +34,7 @@
       </p>
       </div>
       <div class="item">
-      <img src="Images/aboutme-earlylife.JPG" alt="Early Life">
+      <img src="/static/Images/aboutme-earlylife.jpg" alt="Early Life">
       </div>
     </div>
   </section>
@@ -61,7 +42,7 @@
   <section class="supporting">
     <div class= "right-box">
       <div class="item">
-        <img src="Images/aboutme-university.JPG" alt="University">
+        <img src="/static/Images/aboutme-university.JPG" alt="University">
       </div>
       <div class="item">
         <h4>University &emsp; &emsp; 2010-2015</h4>
@@ -99,7 +80,7 @@
         </p>
       </div>
       <div class="item">
-        <img src="Images/aboutme-postuniversity.jpg" alt="Post University">
+        <img src="/static/Images/aboutme-postuniversity.jpg" alt="Post University">
       </div>
     </div>
   </section>
@@ -107,7 +88,7 @@
   <section class="supporting">
     <div class= "right-box">
       <div class="item">
-        <img src="Images/aboutme-university2.jpg" alt="University 2.0">
+        <img src="/static/Images/aboutme-university2.jpg" alt="University 2.0">
       </div>  
       <div class="item">
         <h4>University 2.0 &emsp; &emsp; 2019-PRESENT</h4>
@@ -129,10 +110,4 @@
     </div>
   </section>
 
-    <footer>
-        <div class="container">
-          <p>&copy; Contact info; Email: <a href = "mailto: sandromarcus@hotmail.co.uk">sandromarcus@hotmail.co.uk</p>
-        </div>
-      </footer>
-    </body>
-    </html>
+{% endblock %}

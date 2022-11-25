@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
-    <link href='style.css' rel='stylesheet' type='text/css'/>
-  </head>
+{% extends "base.html" %}
+{% load static %}
 
-  <body>
-    
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html" >Home</a></li>
-          <li><a href="./about_me.html" >About me</a></li> 
-          <li><a href="./cv_employment.html" > Online CV</a></li>
-          <li><a href="./programming.html" >Programming</a></li>
-          <li><a href="./hobbies.html" >Hobbies</a></li> 
-          <li><a href="./python_project.html" > Python Project </a></li> 
-          <li><a href="./c++_project.html" > C++ Project </a></li>
-        </ul>
-      </nav>
-  </header>
+{% block content %}
 
     <main>
       <div class="jumbotron">
         <div class="container">  
           <h1>Professional Details</h1>
-          <a href="./programming.html" class="btn-main">  Next Page</a>
+          <a href="{% url 'sms_backend:programming' %}" class="btn-main">  Next Page</a>
         </div>
         <p>This is a detailed description of both my full employment history and my academic achievements. 
         For examples of condensed CVs please see the links below.</p>
         <br><br>
-        <a href="/Downloads/SandroMoszczynskiCV_Prog.pdf" class="btn-main" target="_blank">  Programming CV</a>
-        <a href="/Downloads/SandroMoszczynskiCV_Technical.pdf" class="btn-main" target="_blank">  Technical CV</a>  
+        <a href="{% url 'sms_backend:show_latest_pdf' 'cv' %}" class="btn-main" target="_blank"> Up to date CV</a>
       </div>
     </main>
 
@@ -56,7 +36,7 @@
           </p>
           <p>External Advisor; Dr. Brian Antao, CEO Tundra Systems.</p>
           <p>View copy of dissertation:</p>
-          <a href="/Downloads/SandroMoszczynskiQECTHE.pdf" class="btn-main" target="_blank">QEC Thesis</a>
+          <a href="{% url 'sms_backend:show_latest_pdf' 'theQEC' %}" class="btn-main" target="_blank">QEC Thesis</a>
           <br><br><br><br><br><br>
           <li id="add_borders">MSc In Physics &emsp; &emsp; &emsp; &emsp; <strong>Merit</strong></li>
           <p>University of Sussex &emsp; &emsp; &emsp; &emsp; Sep 2014 - Sep 2015</p>
@@ -70,7 +50,7 @@
           </p>
           <p>Advisor; Dr. Sebastian Jaeger.</p>
           <p>View copy of dissertation:</p>
-          <a href="/Downloads/SandroMoszczynskiSUSYTHE.pdf" class="btn-main" target="_blank">Susy Thesis</a> 
+          <a href="{% url 'sms_backend:show_latest_pdf' 'theSUSY' %}" class="btn-main" target="_blank">Susy Thesis</a> 
           <br><br><br><br><br><br>
           <li id="add_borders">BSc In Physics &emsp; &emsp; <strong>Second Class Honours</strong></li>
           <p>University of Sussex &emsp; &emsp; &emsp; &emsp; Sep 2011 - Sep 2014</p>
@@ -331,12 +311,4 @@
       </div>
     </section>
 
-    
-    <footer>
-        <div class="container">
-          <p>&copy; Contact info; Email: <a href = "mailto: sandromarcus@hotmail.co.uk">sandromarcus@hotmail.co.uk</p>
-        </div>
-      </footer>
-
-</body>
-</html>
+{% endblock %}

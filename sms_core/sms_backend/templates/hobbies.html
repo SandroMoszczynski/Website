@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
-    <link href='style.css' rel='stylesheet' type='text/css'/>
-  </head>
+{% extends "base.html" %}
+{% load static %}
 
-  <body>
-    
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html" >Home</a></li>
-          <li><a href="./about_me.html" >About me</a></li> 
-          <li><a href="./cv_employment.html" > Online CV</a></li>
-          <li><a href="./programming.html" >Programming</a></li>
-          <li><a href="./hobbies.html" >Hobbies</a></li> 
-          <li><a href="./python_project.html" > Python Project </a></li> 
-          <li><a href="./c++_project.html" > C++ Project </a></li>
-        </ul>
-      </nav>
-  </header>
+{% block content %}
 
   <main>
       <div class="jumbotron">
         <div class="container">  
           <h1> My hobbies and interests </h1>
-          <a href="./python_project.html" class="btn-main">  Next Page</a>
+          <a href="{% url 'sms_backend:python_project' %}" class="btn-main">  Next Page</a>
         </div>
       </div>
    </main>
@@ -53,7 +34,7 @@
         </p>
       </div>
       <div class="item">
-        <img src="Images/hobbies-cooking.jpg" alt="Cooking">
+        <img src="/static/Images/hobbies-cooking.jpg" alt="Cooking">
       </div>
     </div>
   </section>
@@ -61,7 +42,7 @@
   <section class="supporting">
     <div class= "right-box">
       <div class="item">
-        <img src="Images/hobbies-computers.jpeg" alt="Computers">
+        <img src="/static/Images/hobbies-computers.jpeg" alt="Computers">
       </div>
       <div class="item">
         <h4>Computers</h4>
@@ -99,7 +80,7 @@
           more.</p>
       </div>
       <div class="item">
-        <img src="Images/hobbies-controller.jpg" alt="Controller">
+        <img src="/static/Images/hobbies-controller.jpg" alt="Controller">
       </div>
     </div>
   </section>
@@ -107,7 +88,7 @@
   <section class="supporting">
     <div class= "right-box">
       <div class="item">
-        <img src="Images/hobbies-gaming.jpg" alt="Gaming">
+        <img src="/static/Images/hobbies-gaming.jpg" alt="Gaming">
       </div>
       <div class="item">
         <h4>Gaming</h4>
@@ -150,16 +131,9 @@
         </p>
       </div>
       <div class="item">
-        <img src="Images/hobbies-warhammer.jpg" alt="Sports">
+        <img src="/static/Images/hobbies-warhammer.jpg" alt="Sports">
       </div>
     </div>
   </section>
 
-    <footer>
-        <div class="container">
-          <p>&copy; Contact info; Email: <a href = "mailto: sandromarcus@hotmail.co.uk">sandromarcus@hotmail.co.uk</p>
-        </div>
-      </footer>
-    
-</body>
-</html>
+{% endblock %}

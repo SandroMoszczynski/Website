@@ -1,32 +1,12 @@
-<!DOCTYPE html>
-<html>
-  
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
-    <link href='style.css' rel='stylesheet' type='text/css'/>
-  </head>
+{% extends "base.html" %}
+{% load static %}
 
-  <body>
-    
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html" >Home</a></li>
-          <li><a href="./about_me.html" >About me</a></li> 
-          <li><a href="./cv_employment.html" > Online CV</a></li>
-          <li><a href="./programming.html" >Programming</a></li>
-          <li><a href="./hobbies.html" >Hobbies</a></li> 
-          <li><a href="./python_project.html" > Python Project </a></li> 
-          <li><a href="./c++_project.html" > C++ Project </a></li>
-        </ul>
-      </nav>
-  </header>
-
+{% block content %}
     <main>
         <div class="jumbotron">
           <div class="container">  
             <h1>Programming Experience</h1>
-            <a href="./hobbies.html" class="btn-main">  Next Page</a>
+            <a href="{% url 'sms_backend:hobbies' %}" class="btn-main">  Next Page</a>
           </div>
           <p>Below are detailed various examples of my coding ability and a brief history of each language and my feelings about it. I have also included a breakdown of 
             each project with a GitHub link, a description of the program, and some buzzwords/core programming principles used in each application. For a general list of
@@ -73,7 +53,7 @@
             <div class="sub-item"><a href="https://github.com/UCL/mphy0021-2019-data-clustering-sukrire" target="_blank">Clustering</a></div>
             <div class="sub-item"><a href="https://github.com/SandroMoszczynski/Coding-Practice" target="_blank">General Notebooks</a></div>
             <div class="sub-item"><a href="https://github.com/SandroMoszczynski/HPC" target="_blank">HPC Notebooks</a></div>
-            <div class="sub-item"><a href="./python_project.html">Python Project</a></div>
+            <div class="sub-item"><a href="{% url 'sms_backend:python_project' %}">Python Project</a></div>
           </div>
           <div class="item">
             <h4>Description</h4>
@@ -133,7 +113,7 @@
             <h4>Project Title + Link</h4>
             <div class="sub-item_2"><a href="https://github.com/SandroMoszczynski/Pedestrian-Simulator" target="_blank">Pedestrian Simulator</a></div>
             <div class="sub-item"><a href="https://github.com/SandroMoszczynski/Gradient-Descent" target="_blank">Gradient Descent</a></div>
-            <div class="sub-item"><a href="./c++_project.html">C++ Project</a></div>
+            <div class="sub-item"><a href="{% url 'sms_backend:cpp_project' %}">C++ Project</a></div>
           </div>
           <div class="item">
             <h4>Description</h4>
@@ -174,7 +154,7 @@
         <h4>LATEX</h4>
         <p class="p_thinner">
           Many years of experience formatting documents. For examples see copies of my thesis and cv's in my employment history
-          <a href = "./cv_employment.html" id = "normal_link">here</a>. All 4 of the available downloads were made with latex, with my most recent 
+          <a href = "{% url 'sms_backend:cv' %}" id = "normal_link">here</a>. All 4 of the available downloads were made with latex, with my most recent 
           dissertation from UCL using a number of from-scratch built vector images for LaTeX. 
         </p>
         <h4>LINUX/WINDOWS</h4>
@@ -191,11 +171,4 @@
 
     </section>
 
-    <footer>
-        <div class="container">
-          <p>&copy; Contact info; Email: <a href = "mailto: sandromarcus@hotmail.co.uk">sandromarcus@hotmail.co.uk</p>
-        </div>
-      </footer>
-    
-</body>
-</html>
+{% endblock %}
