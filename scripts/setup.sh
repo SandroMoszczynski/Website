@@ -74,11 +74,6 @@ if [[ $? != 0 ]]; then
     exit
 fi
 
-"${repo_root}/venv/bin/python" pip install edl
-if [[ $? != 0 ]]; then
-    echo "Unable to install python-edl, continuing regardless"
-fi
-
 use_ssl=false
 nginx_template="$script_dir/deploy/sms_core/nginx/sms.conf"
 
