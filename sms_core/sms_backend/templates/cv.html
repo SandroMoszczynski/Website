@@ -3,312 +3,403 @@
 
 {% block content %}
 
-    <main>
-      <div class="jumbotron">
-        <div class="container">  
-          <h1>Professional Details</h1>
-          <a href="{% url 'sms_backend:programming' %}" class="btn-main">  Next Page</a>
-        </div>
-        <p>This is a detailed description of both my full employment history and my academic achievements. 
-        For examples of condensed CVs please see the links below.</p>
-        <br><br>
-        <a href="{% url 'sms_backend:show_latest_pdf' 'cv' %}" class="btn-main" target="_blank"> Up to date CV</a>
-      </div>
-    </main>
+<main>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Professional Details</h1>
+			<a href="{% url 'sms_backend:programming' %}" class="btn-main"> Next Page</a>
+		</div>
+		<p>This is a detailed description of both my full employment history and my academic achievements.
+			For examples of condensed CVs please see the links below.</p>
+		<br><br>
+		<a href="{% url 'sms_backend:show_latest_pdf' 'cv' %}" class="btn-main" target="_blank"> Up to date CV</a>
+	</div>
+</main>
 
-    <section class="supporting">
-      <div class="container_edu">
-        <h3>Education</h3>
-        <br>
-        <ul>
-          <li id="add_borders">MSc In Quantum Technologies &emsp; &emsp; <strong>Merit</strong></li>
-          <p>University College London &emsp; &emsp;&emsp; &emsp; Sep 2019 - Sep 2020</p>
-          <p><strong>Key modules:</strong> Quantum Communication, Machine Learning with Big Data, Research with C++ and Python.</p>
-          <p class="p_thinner">My Quantum Technologies Masters focused on two main areas. Programming and Quantum Computing. For 
-            the former I took modules that taught me valuable Python and C++ principles and techniques, as well as giving me knowledge
-            of machine learning algorithms. For the Quantum Computing I took modules which dealt mostly with the theoretical side of 
-            the field. Although some practical applications were explored in my project.
-          </p><br>
-          <p class="p_thinner">This project focused on applying machine learning techniques to quantum error correction, specifically on working with
-            topological codes. The project was based in Python with elements extending to C. An algorithm based on projective
-            simulation papers was created for use with this project. The machine learning agent that was created looked at noisy quantum 
-            memory through surface codes, and searched through possible variations to find an optimal one.
-          </p>
-          <p>External Advisor; Dr. Brian Antao, CEO Tundra Systems.</p>
-          <p>View copy of dissertation:</p>
-          <a href="{% url 'sms_backend:show_latest_pdf' 'theQEC' %}" class="btn-main" target="_blank">QEC Thesis</a>
-          <br><br><br><br><br><br>
-          <li id="add_borders">MSc In Physics &emsp; &emsp; &emsp; &emsp; <strong>Merit</strong></li>
-          <p>University of Sussex &emsp; &emsp; &emsp; &emsp; Sep 2014 - Sep 2015</p>
-          <p><strong>Key modules:</strong> Quantum Field Theory, Symmetries in Particle Physics, Data Analysis Techniques.</p>
-          <p class="p_thinner">Most of the classes taken for this Masters were relevant to theoretical particle physics. Complex mathematical 
-            courses such as Quantum Field Theory, Group Theory and modules that dealt with physics beyond the Standard Model. Added to this was 
-            a comprehensive course on statistical physics, one that would be valuable knowledge for any data scientist position.
-          </p><br>
-          <p  class="p_thinner">My dissertation took the premise of Supersymmetry and simplified the concepts to a single U(1) gauge, estimates
-            of particle content were then made. 
-          </p>
-          <p>Advisor; Dr. Sebastian Jaeger.</p>
-          <p>View copy of dissertation:</p>
-          <a href="{% url 'sms_backend:show_latest_pdf' 'theSUSY' %}" class="btn-main" target="_blank">Susy Thesis</a> 
-          <br><br><br><br><br><br>
-          <li id="add_borders">BSc In Physics &emsp; &emsp; <strong>Second Class Honours</strong></li>
-          <p>University of Sussex &emsp; &emsp; &emsp; &emsp; Sep 2011 - Sep 2014</p>
-          <p><strong>Key modules:</strong> Condensed State Physics, Advanced Condensed State Physics, Scicomp (Python and Matlab).</p>
-          <p  class="p_thinner">The BSc in Physics covered both experimental and theoretical topics with three years of laboratory work.</p>
-        </ul>
-      </div>
+<section class="supporting">
 
-      <br><br><br>
-      
-      <h3>Employment history</h3>
-      <div class="container_grid_cv">
-        <div class="item">
-        <h4>Paid</h4>
-          <ul>
-            <li id="add_borders">Science Technician &emsp; &emsp; Sep 2018 - Sep 2019</li>
-            <p>Oasis Academy Arena</p>
-            <p> I was employed as the sole technician in this secondary school. My responsibilities included ensuring all experiments
-              have risk assessments and all stock is safely stored, including radioactive materials. I also delivered experiments for
-              all three sciences and helped instruct pupils and teachers in how to best use the equipment we have.</p>
-            <p>This was the first year the school was operating with experiments, thus the role required me to order in most of the 
-              chemicals and equipment needed for these. It also required setting up the health and safety protocols of the department.
-              I was also asked to assist with other areas of health and safety protocol, namely food tech.
-            </p>
-            
-            <li id="add_borders">Physics Technician &emsp; &emsp; Sep 2016 - Sep 2018</li>
-            <p>Harris Academy Beckenham</p>
-            <p>I was employed as a technician at this secondary school. My duties revolved around preparing practicals and being
-              the physics specialist in the school. This required me to set up new practicals and explain physical problems to the teachers
-              as well as setting up clubs involving science and engineering.</p>
-            <p>Due to my experience with a professional cooking enviroment I voluntary took up extra duties as a food tech technician, 
-              helping in classes and writing some of the risk assessments for this department.
-            </p>
+	<h3>Employment history</h3>
+	<div class="container_edu">
+		<div class="item">
+			<h4>Paid</h4>
+			<ul>
+				<li id="add_borders">Python Developer &emsp; &emsp; Jun 2021 - Present</li>
+				<p>Mo-Sys Engineering</p>
+				<p>I am currently employed as a software developer in Cambridge. My primary work has been focused on
+					designing
+					cloud systems on amazon web services to allow for remote rendering of CGI and other video effects
+					through unreal
+					engine. This includes creating a web interface for this pipeline as well as helping create our
+					company shop in Django.
+					Our virtual machines run both Linux and windows so I am comfortable coding professionally in both. I
+					have also had
+					some experience coding in Unreal through c++ and extensive experience using the Unreal Engine for
+					broadcasting
+					purposes. I was also responsible for setting up our continuous integration systems through Gitlab
+					for this project.
+				</p>
 
-            <li id="add_borders">Commis Chef &emsp; &emsp;  May-Sep 2016</li>
-            <p>The Queens Head (Fullers)</p>
-            <p>Worked at a busy 400 seater gastro pub. My duties involved preparing for my station and keeping it tidy. Working
-              with the other chefs in a tight knit team and making sure service ran smoothly.</p>
+				<li id="add_borders">Science Technician &emsp; &emsp; Sep 2018 - Sep 2019</li>
+				<p>Oasis Academy Arena</p>
+				<p> I was employed as the sole technician in this secondary school. My responsibilities included
+					ensuring all experiments
+					have risk assessments and all stock is safely stored, including radioactive materials. I also
+					delivered experiments for
+					all three sciences and helped instruct pupils and teachers in how to best use the equipment we have.
+				</p>
+				<p>This was the first year the school was operating with experiments, thus the role required me to order
+					in most of the
+					chemicals and equipment needed for these. It also required setting up the health and safety
+					protocols of the department.
+					I was also asked to assist with other areas of health and safety protocol, namely food tech.
+				</p>
 
-            <li id="add_borders">Commis Chef &emsp; &emsp; Janurary - August 2011</li>
-            <p>Salisbury Food Court</p>
-            <p>Started work as Kitchen Porter and was promoted to Commis Chef. Worked under intense pressure in kitchen and thrived in
-              this environment.</p>
+				<li id="add_borders">Physics Technician &emsp; &emsp; Sep 2016 - Sep 2018</li>
+				<p>Harris Academy Beckenham</p>
+				<p>I was employed as a technician at this secondary school. My duties revolved around preparing
+					practicals and being
+					the physics specialist in the school. This required me to set up new practicals and explain physical
+					problems to the teachers
+					as well as setting up clubs involving science and engineering.</p>
+				<p>Due to my experience with a professional cooking enviroment I voluntary took up extra duties as a
+					food tech technician,
+					helping in classes and writing some of the risk assessments for this department.
+				</p>
 
-            <li id="add_borders">Sales Rep &emsp; &emsp; 2008 - 2009</li>
-            <p>Currys</p>
-            <p>Worked in a sales team on shop floor. Interacted with customers and worked tills.</p>
-          </ul>
-        </div>
-        <div class="item">
-          <h4>Un-Paid</h4>
-          <ul>
-            <li id="add_borders">Secretary Of DJC &emsp; &emsp; 2011 - 2014</li>
-            <p>Sussex University</p>
-            <p>The Departmental Joint Committee (DJC) is the regular meeting of the Physics and Astronomy department heads with the elected student body
-              representatives. As secretary I took minutes and organised rooms and meeting times as well as kept both lectures and students updated on
-              their designated tasks. On top of this I played a large part in organising the annual physics ball. Each year the event was sold out with
-               over 150 people attending each time. The ball featured prizes for lecturers from student voted categories and nominations, raffles of prizes 
-              such as textbooks for students donated from various sources and guest speakers from prominent scientific institutions.</p>
-            <li id="add_borders">President of Physics Society &emsp; &emsp; 2012-2015</li>
-            <p>Sussex University</p>
-            <p>The physics society at Sussex (QSoc) was widely praised for helping students interact with each other after I took over. We
-              organised social events such as LAN parties, quizzes and other meet and greets which helped make the department a close-knit community. 
-              As president it was my duty to oversee all the submembers and make sure the organisation ran smoothly, on top of keeping enough money to allow 
-              for more social events.   
-            </p>
-          </ul>
-        </div>
-      </div>
-      <h3>Skills</h3>
-      <div class="container_grid_cv_2">
-        <div class="item">
-          <div class="sub-item_keyskills" id="skill_titles">Key Skills:</div>
-          <div class="sub-item_physics" id="skill_titles">Physical Understanding: </div>
-          <div class="sub-item_maths" id="skill_titles">Mathematical Abilities:</div> 
-          <div class="sub-item_labs" id="skill_titles">Laboratory Skills:</div>
-          <div class="sub-item_hs" id="skill_titles">Health and Safety:</div>
-          <div class="sub-item_teamwork" id="skill_titles">Teamwork: </div>
-          <div class="sub-item_communication" id="skill_titles">Communication:</div>
-          <div class="sub-item_selfimp" id="skill_titles">Self Improvement and Motivation: </div>
-          <div class="sub-item_short" id="skill_titles">Programming:</div>
-          <div class="sub-item_short" id="skill_titles">Languages: </div>
-          <div class="sub-item_short" id="skill_titles">Stress Tolerance:</div>
-          <div class="sub-item_short" id="skill_titles">Leadership Experience: </div>
-          <div class="sub-item_short" id="skill_titles">Community Building:</div>
-        </div>
-        <div class="item">
-          <div class="sub-item_keyskills" >
-            <ul>
-              <li>Rapid Learning</li>
-              <p class="p_thinner">Throughout my life I have not shied away from difficult topics or challenges that seemed daunting, and have never come across 
-                a topic that I could not understand and adapt to quickly.
-              </p>
-              <li>Physical and Mathematical Understanding</li>
-              <p class="p_thinner">Many years working with some of the most challenging physical and mathematical models have given me a deep understanding 
-                of how to go about analytical problems.
-              </p>
-              <li>Programming knowledge</li>
-              <p class="p_thinner">Experience in a multitude of languages and areas, and knowledge of when to use which techniques. Primary languages are Python
-                and C++. (Please see programming tab for details)
-              </p>
-              <li>Analytical Mind</li>
-              <p class="p_thinner">Excellent spatial and mathematical reasoning skills that have been honed over years spent working on physics, maths and 
-                computing problems.
-              </p>
-              <li>Self Motivation</li>
-              <p class="p_thinner">Always looking to push and challenge myself I have decided to start three new personal projects, the first is this website and 
-                the other two can be found in the Python and C++ projects of this website.
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_physics" >
-            <ul>
-              <li>Standard Undergraduate Physics Courses as Accredited by IOP</li>
-              <p class="p_thinner">These include subjects such as electromagnetism, vector calculus, solid state physics, atomic physics, particle physics,
-                optics and imaging, astronomy and three years of laboratory work.
-              </p>
-              <li>Advanced Particle Physics Modules</li>
-              <p class="p_thinner">These included subjects such as Quantum Field Theory, Group theory, Advanced Quantum Mechanics, and modules on frontier physics
-                beyond the standard model as well as my dissertation on Supersymmetry. 
-              </p>
-              <li>Quantum Communication</li>
-              <p class="p_thinner">This includes both courses in advanced quantum mechanics as well as my recent masters in quantum communication. This gave 
-                me working knowledge of all types of quantum systems from qubits to quantum encryption. 
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_maths" >
-            <ul>
-              <li>Advanced Mathematical Cources</li>
-              <p class="p_thinner">As demonstrated by my ability to take on advanced topics such as Quantum Field Theory, Supersymmetry etc.
-              </p>
-              <li>Statistical Modelling</li>
-              <p class="p_thinner">Throughout my undergraduate laboratories I have used scientific statistical methods to formulate my results. Furthermore during my 
-                first masters I had undertaken and completed an advanced course in statistics. 
-              </p>
-              <li>Mathematical Analytics</li>
-              <p class="p_thinner">Wherever possible I always employ mathematical reasoning and modelling, be it through programming or calculating dimentions for 
-                physical projects around the home.
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_labs" >
-            <ul>
-              <li>Undergraduate Experience</li>
-              <p class="p_thinner">I have three years of undergraduate experience working with complicated and highly technical pieces of machinery and gathering data 
-                for statistical modelling afterwords. 
-              </p>
-              <li>Professional Experience</li>
-              <p class="p_thinner">Three further years working at secondary school laboratories. Wide range of experience from stock management around a department to ordering 
-                and maintaing the departmental supplies. Experience with not just physics but biology and chemistry.  
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_hs" >
-            <ul>
-              <li>Writing Risk Assessements</li>
-              <p class="p_thinner">In my last technician role I was required to write all the risk assessements for the department. This included assessements for chemicals 
-                and radioactive sources. I also made sure that the radioactive sources were correctly tested. Also have experience with general food hygiene.
-              </p>
-              <li>Certified Courses</li>
-              <p class="p_thinner">Have been certified in Food Hygeine, Radioactive source handling and storage and general laboratory safety.
-              </p>
-              <li>First Aid</li>
-              <p class="p_thinner">Had first aid certificate for three years while working as a technician. 
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_teamwork">
-            <ul>
-              <li>Professional Experience</li>
-              <p class="p_thinner">Worked as part of a team of three technicians at Harris Academy Beckenham. In this role as addition to my role as a physics expert I both
-                 assisted other members of this team and helped teachers within the department as a whole.
-              </p>
-              <p class="p_thinner">At my most recent position worked as sole technician for the department, but my role required much more coordination between management,
-                human resources, other deparments and even outside institutions. 
-              </p>
-              <p class="p_thinner">Experience working as a chef and kitchen porter in an extremely busy kitchen as part of a highly organised and tight knit team.
-              </p>
-              <li>University Experience</li>
-              <p class="p_thinner">Three years of laboratory work with various partners sharing knowledge and helping each other through each experiment. During most recent 
-                masters there were also two group projects, a poster and an article that required us to work collaboratively to achieve a common goal. 
-              </p>
-              <li>Personal Experience</li>
-              <p class="p_thinner">During secondary school I was enrolled in the Naval Cadets, which involed numerous group activities such as problem solving situations, 
-                marching, and group excursions to the wilderness. Many experiences being on school teams such as cricket, football and basketball.
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_communication">
-            <ul>
-              <li>Professional Experience</li>
-              <p class="p_thinner">During my time as a technician I gave talks to teachers and students about various topics. These included health and safety demonstrations,
-                 experimental demonstrations and general overviews of a day's events (for large school activities). 
-              </p>
-              <li>University Experience</li>
-              <p class="p_thinner">For my most recent Masters project I underwent a Viva or defence of my dissertation, this was on top of a presentation on a solo article 
-                on different types of solid state quantum computer and their comparative strengths. For my first Masters I was also required to give presentations in front of 
-                distinguished researchers on my dissertation topic. I also gave smaller talks and presentations during my undergraduate degree. 
-              </p>
-              <p>For my most recent Masters I was required to search for an external supervisor, and as such this required contacting numerous institutions looking for Masters 
-                projects. 
-              </p>
-              <li>Personal Experience</li>
-              <p class="p_thinner">As part of my voluntary work at Sussex I was required to take minutes and chair meetings, as well as give clear and concise directions 
-                to subordinates.
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_selfimp">
-            <ul>
-              <li>Self Improvement</li>
-              <p class="p_thinner">After finishing my Quantum Technologies Mastesrs I have taken it upon myself to expand my repetoire of coding skills. Available on the 
-                programming page of this website are details of my learning. They include SQl, HTML, CSS and advances in my understanding of Python and C++.
-              </p>
-              <li>Motivation on Larger projects</li>
-              <p class="p_thinner">I have completed 2 Masters projects, one in machine learning with quantum systems and the other in Supersymmetry.</p>
-              <p class="p_thinner">For my most recent masters I needed to learn numerous topics before starting, as these topics had not yet been covered in the course.</p>
-              <p class="p_thinner">I took on advanced level C++ courses without prior C++ experience as I was confident in my ability to learn rapidly, which proved
-                to be well-founded.
-              </p>
-            </ul>
-          </div>
-          <div class="sub-item_short">
-            <ul>
-              <li>For details on programming experience please see page labelled 
-              <a href="./programming.html">PROGRAMMING</a>.</li>
-            </ul>
-          </div>
-          <div class="sub-item_short">
-            <ul>
-              <li>I am bi-lingual being able to speak both Polish and English. My Polish is conversationally
-                fluent and English is my mother tongue.</li>
-            </ul>
-          </div>
-          <div class="sub-item_short">
-            <ul>
-              <li>My time working as a chef has given me the ability to work under bouts of intense pressure,
-                while each of my degrees have reinforced my ability to work to a tight deadline, both
-                individually and in a team.</li>
-            </ul>
-          </div>
-          <div class="sub-item_short">
-            <ul>
-              <li>I have spent three years as the President of the Physics Society at Sussex. This time has taught
-                me to delegate tasks, to listen to the requests of others and to be able to give quick, decisive
-                decisions.</li>
-            </ul>
-          </div>
-          <div class="sub-item_short">
-            <ul>
-              <li>I have been part of many extracurricular activities during my time in education, including a
-                leading a society, being the Secretary of a committee and participating in three sports teams. I
-                am always interested in meeting new people and finding ways to socialise with colleagues.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+				<li id="add_borders">Commis Chef &emsp; &emsp; May-Sep 2016</li>
+				<p>The Queens Head (Fullers)</p>
+				<p>Worked at a busy 400 seater gastro pub. My duties involved preparing for my station and keeping it
+					tidy. Working
+					with the other chefs in a tight knit team and making sure service ran smoothly.</p>
+
+				<li id="add_borders">Commis Chef &emsp; &emsp; Janurary - August 2011</li>
+				<p>Salisbury Food Court</p>
+				<p>Started work as Kitchen Porter and was promoted to Commis Chef. Worked under intense pressure in
+					kitchen and thrived in
+					this environment.</p>
+
+				<li id="add_borders">Sales Rep &emsp; &emsp; 2008 - 2009</li>
+				<p>Currys</p>
+				<p>Worked in a sales team on shop floor. Interacted with customers and worked tills.</p>
+			</ul>
+		</div>
+		<div class="item">
+			<h4>Un-Paid</h4>
+			<ul>
+				<li id="add_borders">Secretary Of DJC &emsp; &emsp; 2011 - 2014</li>
+				<p>Sussex University</p>
+				<p>The Departmental Joint Committee (DJC) is the regular meeting of the Physics and Astronomy department
+					heads with the elected student body
+					representatives. As secretary I took minutes and organised rooms and meeting times as well as kept
+					both lectures and students updated on
+					their designated tasks. On top of this I played a large part in organising the annual physics ball.
+					Each year the event was sold out with
+					over 150 people attending each time. The ball featured prizes for lecturers from student voted
+					categories and nominations, raffles of prizes
+					such as textbooks for students donated from various sources and guest speakers from prominent
+					scientific institutions.</p>
+				<li id="add_borders">President of Physics Society &emsp; &emsp; 2012-2015</li>
+				<p>Sussex University</p>
+				<p>The physics society at Sussex (QSoc) was widely praised for helping students interact with each other
+					after I took over. We
+					organised social events such as LAN parties, quizzes and other meet and greets which helped make the
+					department a close-knit community.
+					As president it was my duty to oversee all the submembers and make sure the organisation ran
+					smoothly, on top of keeping enough money to allow
+					for more social events.
+				</p>
+			</ul>
+		</div>
+	</div>
+
+	<br><br><br>
+
+
+	<h3>Education</h3>
+	<div class="container_edu">
+		<br>
+		<ul>
+			<li id="add_borders">MSc In Quantum Technologies &emsp; &emsp; <strong>Merit</strong></li>
+			<p>University College London &emsp; &emsp;&emsp; &emsp; Sep 2019 - Sep 2020</p>
+			<p><strong>Key modules:</strong> Quantum Communication, Machine Learning with Big Data, Research with C++
+				and Python.</p>
+			<p class="p_thinner">My Quantum Technologies Masters focused on two main areas. Programming and Quantum
+				Computing. For
+				the former I took modules that taught me valuable Python and C++ principles and techniques, as well as
+				giving me knowledge
+				of machine learning algorithms. For the Quantum Computing I took modules which dealt mostly with the
+				theoretical side of
+				the field. Although some practical applications were explored in my project.
+			</p><br>
+			<p class="p_thinner">This project focused on applying machine learning techniques to quantum error
+				correction, specifically on working with
+				topological codes. The project was based in Python with elements extending to C. An algorithm based on
+				projective
+				simulation papers was created for use with this project. The machine learning agent that was created
+				looked at noisy quantum
+				memory through surface codes, and searched through possible variations to find an optimal one.
+			</p>
+			<p>External Advisor; Dr. Brian Antao, CEO Tundra Systems.</p>
+			<p>View copy of dissertation:</p>
+			<a href="{% url 'sms_backend:show_latest_pdf' 'theQEC' %}" class="btn-main" target="_blank">QEC Thesis</a>
+			<br><br><br><br><br><br>
+			<li id="add_borders">MSc In Physics &emsp; &emsp; &emsp; &emsp; <strong>Merit</strong></li>
+			<p>University of Sussex &emsp; &emsp; &emsp; &emsp; Sep 2014 - Sep 2015</p>
+			<p><strong>Key modules:</strong> Quantum Field Theory, Symmetries in Particle Physics, Data Analysis
+				Techniques.</p>
+			<p class="p_thinner">Most of the classes taken for this Masters were relevant to theoretical particle
+				physics. Complex mathematical
+				courses such as Quantum Field Theory, Group Theory and modules that dealt with physics beyond the
+				Standard Model. Added to this was
+				a comprehensive course on statistical physics, one that would be valuable knowledge for any data
+				scientist position.
+			</p><br>
+			<p class="p_thinner">My dissertation took the premise of Supersymmetry and simplified the concepts to a
+				single U(1) gauge, estimates
+				of particle content were then made.
+			</p>
+			<p>Advisor; Dr. Sebastian Jaeger.</p>
+			<p>View copy of dissertation:</p>
+			<a href="{% url 'sms_backend:show_latest_pdf' 'theSUSY' %}" class="btn-main" target="_blank">Susy Thesis</a>
+			<br><br><br><br><br><br>
+			<li id="add_borders">BSc In Physics &emsp; &emsp; <strong>Second Class Honours</strong></li>
+			<p>University of Sussex &emsp; &emsp; &emsp; &emsp; Sep 2011 - Sep 2014</p>
+			<p><strong>Key modules:</strong> Condensed State Physics, Advanced Condensed State Physics, Scicomp (Python
+				and Matlab).</p>
+			<p class="p_thinner">The BSc in Physics covered both experimental and theoretical topics with three years of
+				laboratory work.</p>
+		</ul>
+	</div>
+
+	<br><br><br>
+
+
+	<h3>Skills</h3>
+	<div class="container_grid_cv_2">
+		<div class="item">
+			<div class="sub-item_keyskills" id="skill_titles">Key Skills:</div>
+			<div class="sub-item_physics" id="skill_titles">Physical Understanding: </div>
+			<div class="sub-item_maths" id="skill_titles">Mathematical Abilities:</div>
+			<div class="sub-item_labs" id="skill_titles">Laboratory Skills:</div>
+			<div class="sub-item_hs" id="skill_titles">Health and Safety:</div>
+			<div class="sub-item_teamwork" id="skill_titles">Teamwork: </div>
+			<div class="sub-item_communication" id="skill_titles">Communication:</div>
+			<div class="sub-item_selfimp" id="skill_titles">Self Improvement and Motivation: </div>
+			<div class="sub-item_short" id="skill_titles">Programming:</div>
+			<div class="sub-item_short" id="skill_titles">Languages: </div>
+			<div class="sub-item_short" id="skill_titles">Stress Tolerance:</div>
+			<div class="sub-item_short" id="skill_titles">Leadership Experience: </div>
+			<div class="sub-item_short" id="skill_titles">Community Building:</div>
+		</div>
+		<div class="item">
+			<div class="sub-item_keyskills">
+				<ul>
+					<li>Rapid Learning</li>
+					<p class="p_thinner">Throughout my life I have not shied away from difficult topics or challenges
+						that seemed daunting, and have never come across
+						a topic that I could not understand and adapt to quickly.
+					</p>
+					<li>Physical and Mathematical Understanding</li>
+					<p class="p_thinner">Many years working with some of the most challenging physical and mathematical
+						models have given me a deep understanding
+						of how to go about analytical problems.
+					</p>
+					<li>Programming knowledge</li>
+					<p class="p_thinner">Experience in a multitude of languages and areas, and knowledge of when to use
+						which techniques. Primary languages are Python
+						and C++. (Please see programming tab for details)
+					</p>
+					<li>Analytical Mind</li>
+					<p class="p_thinner">Excellent spatial and mathematical reasoning skills that have been honed over
+						years spent working on physics, maths and
+						computing problems.
+					</p>
+					<li>Self Motivation</li>
+					<p class="p_thinner">Always looking to push and challenge myself I have decided to start three new
+						personal projects, the first is this website and
+						the other two can be found in the Python and C++ projects of this website.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_physics">
+				<ul>
+					<li>Standard Undergraduate Physics Courses as Accredited by IOP</li>
+					<p class="p_thinner">These include subjects such as electromagnetism, vector calculus, solid state
+						physics, atomic physics, particle physics,
+						optics and imaging, astronomy and three years of laboratory work.
+					</p>
+					<li>Advanced Particle Physics Modules</li>
+					<p class="p_thinner">These included subjects such as Quantum Field Theory, Group theory, Advanced
+						Quantum Mechanics, and modules on frontier physics
+						beyond the standard model as well as my dissertation on Supersymmetry.
+					</p>
+					<li>Quantum Communication</li>
+					<p class="p_thinner">This includes both courses in advanced quantum mechanics as well as my recent
+						masters in quantum communication. This gave
+						me working knowledge of all types of quantum systems from qubits to quantum encryption.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_maths">
+				<ul>
+					<li>Advanced Mathematical Cources</li>
+					<p class="p_thinner">As demonstrated by my ability to take on advanced topics such as Quantum Field
+						Theory, Supersymmetry etc.
+					</p>
+					<li>Statistical Modelling</li>
+					<p class="p_thinner">Throughout my undergraduate laboratories I have used scientific statistical
+						methods to formulate my results. Furthermore during my
+						first masters I had undertaken and completed an advanced course in statistics.
+					</p>
+					<li>Mathematical Analytics</li>
+					<p class="p_thinner">Wherever possible I always employ mathematical reasoning and modelling, be it
+						through programming or calculating dimentions for
+						physical projects around the home.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_labs">
+				<ul>
+					<li>Undergraduate Experience</li>
+					<p class="p_thinner">I have three years of undergraduate experience working with complicated and
+						highly technical pieces of machinery and gathering data
+						for statistical modelling afterwords.
+					</p>
+					<li>Professional Experience</li>
+					<p class="p_thinner">Three further years working at secondary school laboratories. Wide range of
+						experience from stock management around a department to ordering
+						and maintaing the departmental supplies. Experience with not just physics but biology and
+						chemistry.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_hs">
+				<ul>
+					<li>Writing Risk Assessements</li>
+					<p class="p_thinner">In my last technician role I was required to write all the risk assessements
+						for the department. This included assessements for chemicals
+						and radioactive sources. I also made sure that the radioactive sources were correctly tested.
+						Also have experience with general food hygiene.
+					</p>
+					<li>Certified Courses</li>
+					<p class="p_thinner">Have been certified in Food Hygeine, Radioactive source handling and storage
+						and general laboratory safety.
+					</p>
+					<li>First Aid</li>
+					<p class="p_thinner">Had first aid certificate for three years while working as a technician.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_teamwork">
+				<ul>
+					<li>Professional Experience</li>
+					<p class="p_thinner">Worked as part of a team of three technicians at Harris Academy Beckenham. In
+						this role as addition to my role as a physics expert I both
+						assisted other members of this team and helped teachers within the department as a whole.
+					</p>
+					<p class="p_thinner">At my most recent position worked as sole technician for the department, but my
+						role required much more coordination between management,
+						human resources, other deparments and even outside institutions.
+					</p>
+					<p class="p_thinner">Experience working as a chef and kitchen porter in an extremely busy kitchen as
+						part of a highly organised and tight knit team.
+					</p>
+					<li>University Experience</li>
+					<p class="p_thinner">Three years of laboratory work with various partners sharing knowledge and
+						helping each other through each experiment. During most recent
+						masters there were also two group projects, a poster and an article that required us to work
+						collaboratively to achieve a common goal.
+					</p>
+					<li>Personal Experience</li>
+					<p class="p_thinner">During secondary school I was enrolled in the Naval Cadets, which involed
+						numerous group activities such as problem solving situations,
+						marching, and group excursions to the wilderness. Many experiences being on school teams such as
+						cricket, football and basketball.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_communication">
+				<ul>
+					<li>Professional Experience</li>
+					<p class="p_thinner">During my time as a technician I gave talks to teachers and students about
+						various topics. These included health and safety demonstrations,
+						experimental demonstrations and general overviews of a day's events (for large school
+						activities).
+					</p>
+					<li>University Experience</li>
+					<p class="p_thinner">For my most recent Masters project I underwent a Viva or defence of my
+						dissertation, this was on top of a presentation on a solo article
+						on different types of solid state quantum computer and their comparative strengths. For my first
+						Masters I was also required to give presentations in front of
+						distinguished researchers on my dissertation topic. I also gave smaller talks and presentations
+						during my undergraduate degree.
+					</p>
+					<p>For my most recent Masters I was required to search for an external supervisor, and as such this
+						required contacting numerous institutions looking for Masters
+						projects.
+					</p>
+					<li>Personal Experience</li>
+					<p class="p_thinner">As part of my voluntary work at Sussex I was required to take minutes and chair
+						meetings, as well as give clear and concise directions
+						to subordinates.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_selfimp">
+				<ul>
+					<li>Self Improvement</li>
+					<p class="p_thinner">After finishing my Quantum Technologies Mastesrs I have taken it upon myself to
+						expand my repetoire of coding skills. Available on the
+						programming page of this website are details of my learning. They include SQl, HTML, CSS and
+						advances in my understanding of Python and C++.
+					</p>
+					<li>Motivation on Larger projects</li>
+					<p class="p_thinner">I have completed 2 Masters projects, one in machine learning with quantum
+						systems and the other in Supersymmetry.</p>
+					<p class="p_thinner">For my most recent masters I needed to learn numerous topics before starting,
+						as these topics had not yet been covered in the course.</p>
+					<p class="p_thinner">I took on advanced level C++ courses without prior C++ experience as I was
+						confident in my ability to learn rapidly, which proved
+						to be well-founded.
+					</p>
+				</ul>
+			</div>
+			<div class="sub-item_short">
+				<ul>
+					<li>For details on programming experience please see page labelled
+						<a href="./programming.html">PROGRAMMING</a>.
+					</li>
+				</ul>
+			</div>
+			<div class="sub-item_short">
+				<ul>
+					<li>I am bi-lingual being able to speak both Polish and English. My Polish is conversationally
+						fluent and English is my mother tongue.</li>
+				</ul>
+			</div>
+			<div class="sub-item_short">
+				<ul>
+					<li>My time working as a chef has given me the ability to work under bouts of intense pressure,
+						while each of my degrees have reinforced my ability to work to a tight deadline, both
+						individually and in a team.</li>
+				</ul>
+			</div>
+			<div class="sub-item_short">
+				<ul>
+					<li>I have spent three years as the President of the Physics Society at Sussex. This time has taught
+						me to delegate tasks, to listen to the requests of others and to be able to give quick, decisive
+						decisions.</li>
+				</ul>
+			</div>
+			<div class="sub-item_short">
+				<ul>
+					<li>I have been part of many extracurricular activities during my time in education, including a
+						leading a society, being the Secretary of a committee and participating in three sports teams. I
+						am always interested in meeting new people and finding ways to socialise with colleagues.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
 
 {% endblock %}
