@@ -9,8 +9,8 @@ Type=simple
 User=USER
 Group=USER
 EnvironmentFile=CONFIG_DIR/gunicorn.env
-WorkingDirectory=ROOT_DIR/django
-ExecStart=/home/ubuntu/Website/venv/bin/gunicorn --config /home/ubuntu/sms_config.d/gunicorn.conf.py sms_core.wsgi
+WorkingDirectory=ROOT_DIR/sms_core
+ExecStart=/bin/sh -c '${GUNICORN_BIN} --config ${GUNICORN_CONF} $GUNICORN_APP'
 Restart=on-failure
 RestartSec=5s
 
