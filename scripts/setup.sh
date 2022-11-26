@@ -35,16 +35,16 @@ fi
 if [[ $? != 0 ]]; then
     echo "Error creating directory ${log_dir}/gunicorn"
 fi
-/usr/bin/mkdir -p "${repo_root}/django/media"
+/usr/bin/mkdir -p "${repo_root}/sms_core/media"
 if [[ $? != 0 ]]; then
     echo "Error creating directory ${repo_root}/sms_core/media"
 fi
 
 
 # Create the configuration appropriate for this installation
-/usr/bin/cp ${script_dir}/deploy/django/nginx/nginx.conf ${config_dir}/nginx.conf
+/usr/bin/cp ${script_dir}/deploy/sms_core/nginx/nginx.conf ${config_dir}/nginx.conf
 if [[ $? != 0 ]]; then
-    echo "Error copying ${script_dir}/deploy/django/nginx/nginx.conf to ${config_dir}/nginx.conf"
+    echo "Error copying ${script_dir}/deploy/sms_core/nginx/nginx.conf to ${config_dir}/nginx.conf"
 fi
 
 # Set up string replacements
@@ -96,7 +96,7 @@ if [[ -z "$url_safe_name" ]]; then
 fi
 
 use_ssl=false
-nginx_template="$script_dir/deploy/django/nginx/sms.conf"
+nginx_template="$script_dir/deploy/sms_core/nginx/sms.conf"
 
 # Search for an installed certificate for the constructed domain name
 # installed_certificates=$(sudo /usr/bin/certbot certificates)
@@ -128,7 +128,7 @@ nginx_template="$script_dir/deploy/django/nginx/sms.conf"
 #     done <<< "$installed_certificates"
 #     if [[ -n "$cert_path" && -n "$key_path" ]]; then
 #         sed_script="${sed_script};s|FULLY_QUALIFIED_URL|${url_safe_name}.neartime.mo-sys.com|g;s|RM_CERT|${cert_path}|g;s|RM_KEY|${key_path}|g"
-#         nginx_template="$script_dir/deploy/django/nginx/ssl.sms.conf"
+#         nginx_template="$script_dir/deploy/sms_core/nginx/ssl.sms.conf"
 #     fi
 # fi
 
@@ -138,15 +138,15 @@ nginx_template="$script_dir/deploy/django/nginx/sms.conf"
 if [[ $? != 0 ]]; then
     echo "Error creating ${config_dir}/nginx.sms.conf"
 fi
-/usr/bin/sed -e "${sed_script}" $script_dir/deploy/django/gunicorn/gunicorn.service > ${config_dir}/gunicorn.service
+/usr/bin/sed -e "${sed_script}" $script_dir/deploy/sms_core/gunicorn/gunicorn.service > ${config_dir}/gunicorn.service
 if [[ $? != 0 ]]; then
     echo "Error creating ${config_dir}/gunicorn.service"
 fi
-/usr/bin/sed -e "${sed_script}" $script_dir/deploy/django/gunicorn/gunicorn.env > ${config_dir}/gunicorn.env
+/usr/bin/sed -e "${sed_script}" $script_dir/deploy/sms_core/gunicorn/gunicorn.env > ${config_dir}/gunicorn.env
 if [[ $? != 0 ]]; then
     echo "Error creating ${config_dir}/gunicorn.env"
 fi
-/usr/bin/sed -e "${sed_script}" $script_dir/deploy/django/gunicorn/gunicorn.conf.py > ${config_dir}/gunicorn.conf.py
+/usr/bin/sed -e "${sed_script}" $script_dir/deploy/sms_core/gunicorn/gunicorn.conf.py > ${config_dir}/gunicorn.conf.py
 if [[ $? != 0 ]]; then
     echo "Error creating ${config_dir}/gunicorn.conf.py"
 fi
@@ -155,7 +155,7 @@ sudo /usr/bin/chown ${USER} ${config_dir}/gunicorn.logrotate
 if [[ $? != 0 ]]; then
     echo "Error changing ownership of ${config_dir}/gunicorn.logrotate to '${USER}'"
 fi
-/usr/bin/sed -e "${sed_script}" $script_dir/deploy/django/gunicorn/gunicorn.logrotate > ${config_dir}/gunicorn.logrotate
+/usr/bin/sed -e "${sed_script}" $script_dir/deploy/sms_core/gunicorn/gunicorn.logrotate > ${config_dir}/gunicorn.logrotate
 if [[ $? != 0 ]]; then
     echo "Error creating ${config_dir}/gunicorn.logrotate"
 fi
@@ -180,9 +180,9 @@ echo "Reload systemd to pick up new .service files"
 sudo systemctl daemon-reload
 
 echo "Django managment"
-"${repo_root}/venv/bin/python" "${repo_root}/django/manage.py" collectstatic --clear --no-input
-"${repo_root}/venv/bin/python" "${repo_root}/django/manage.py" migrate
-/usr/bin/echo "{\"git_desc\":\"$(git -C "${repo_root}" describe --all --always)\",\"git_sha\":\"$(git -C "${repo_root}" rev-parse --verify HEAD)\",\"git_sha_short\":\"$(git -C "${repo_root}" rev-parse --verify --short HEAD)\"}" > "${repo_root}/django/media/version.json"
+"${repo_root}/venv/bin/python" "${repo_root}/sms_core/manage.py" collectstatic --clear --no-input
+"${repo_root}/venv/bin/python" "${repo_root}/sms_core/manage.py" migrate
+/usr/bin/echo "{\"git_desc\":\"$(git -C "${repo_root}" describe --all --always)\",\"git_sha\":\"$(git -C "${repo_root}" rev-parse --verify HEAD)\",\"git_sha_short\":\"$(git -C "${repo_root}" rev-parse --verify --short HEAD)\"}" > "${repo_root}/sms_core/media/version.json"
 
 echo "Start services"
 sudo service nginx start
