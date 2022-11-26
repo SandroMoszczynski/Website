@@ -79,22 +79,6 @@ if [[ $? != 0 ]]; then
     echo "Unable to install python-edl, continuing regardless"
 fi
 
-# Get the URL safe name
-# Now look up the the URL safe name from the secure store (same value used in settings.py)
-raw_url_safe_name=$(${repo_root}/venv/bin/python ${repo_root}/scripts/get_stored_values.py --key URL_SAFE_NAME 2>&1)
-
-if [[ $? -ne 0 ]]; then
-    echo "Error getting raw url safe name, ${raw_url_safe_name}"
-fi
-
-url_safe_name=$(echo "${raw_url_safe_name}" | /usr/bin/grep URL_SAFE_NAME | /usr/bin/sed -e 's/URL_SAFE_NAME://' )
-
-# If we didn't find a value use a default
-if [[ -z "$url_safe_name" ]]; then
-    echo "Error getting URL safe name"
-    url_safe_name=manager
-fi
-
 use_ssl=false
 nginx_template="$script_dir/deploy/sms_core/nginx/sms.conf"
 
@@ -106,7 +90,7 @@ nginx_template="$script_dir/deploy/sms_core/nginx/sms.conf"
 #     found_cert=false
 #     while read -r line; do
 #         case $line in
-#             *"Domains: "*"${url_safe_name}.neartime.mo-sys.com"*)
+#             *"Domains: "*"moszczynski.co.uk"*)
 #                 # Parsing a certificate that includes our domain
 #                 found_cert=true
 #                 ;;
@@ -127,7 +111,7 @@ nginx_template="$script_dir/deploy/sms_core/nginx/sms.conf"
 #         esac
 #     done <<< "$installed_certificates"
 #     if [[ -n "$cert_path" && -n "$key_path" ]]; then
-#         sed_script="${sed_script};s|FULLY_QUALIFIED_URL|${url_safe_name}.neartime.mo-sys.com|g;s|RM_CERT|${cert_path}|g;s|RM_KEY|${key_path}|g"
+#         sed_script="${sed_script};s|FULLY_QUALIFIED_URL|$moszczynski.co.uk|g;s|RM_CERT|${cert_path}|g;s|RM_KEY|${key_path}|g"
 #         nginx_template="$script_dir/deploy/sms_core/nginx/ssl.sms.conf"
 #     fi
 # fi
