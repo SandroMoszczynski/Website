@@ -1,0 +1,13 @@
+LOG_DIR/gunicorn/*.log {
+    weekly
+    missingok
+    rotate 12
+    compress
+    delaycompress
+    notifempty
+    dateext
+    sharedscripts
+    postrotate
+        killall -s USR1 gunicorn
+    endscript
+}
