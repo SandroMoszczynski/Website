@@ -10,4 +10,3 @@ Simple site to show what I can do
 - create endpoint for refreshing code
 - create endpoint for special page
 - document endpoints
-- remove debug

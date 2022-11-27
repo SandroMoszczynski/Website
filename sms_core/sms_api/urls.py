@@ -1,2 +1,2 @@
-app_name = 'sms_backend'
+app_name = 'sms_api'
 urlpatterns = []
