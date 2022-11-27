@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('sms_backend.urls')),
+    path('', include('sms_backend.urls', namespace='sms_backend_unique')),
     path('', include('sms_api.urls')),
 ]
