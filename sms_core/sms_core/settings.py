@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['moszczynski.co.uk', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    # default
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +44,10 @@ INSTALLED_APPS = [
     # Created apps:
     'sms_api.apps.SmsApiConfig',
     'sms_backend.apps.SmsBackendConfig',    
+
+    # Plugins
+    'rest_framework',
+    'oauth2_provider'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +139,11 @@ MEDIA_URL= "/media/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ),    
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
+    'ALLOWED_VERSIONS': ['public_v1']
+}

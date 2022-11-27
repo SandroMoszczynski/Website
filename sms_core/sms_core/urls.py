@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sms_backend.urls')),
     path('', include('sms_api.urls')),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
