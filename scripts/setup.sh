@@ -10,6 +10,7 @@
 #  python3-pip
 #  python3.10-venv
 #  unzip
+#  certbot classic
 
 this_script=$(readlink -f ${BASH_SOURCE})
 script_dir=$(dirname ${this_script})
@@ -77,39 +78,39 @@ fi
 use_ssl=false
 nginx_template="$script_dir/sms_core/nginx/sms.conf"
 
-# Search for an installed certificate for the constructed domain name
-# installed_certificates=$(sudo /usr/bin/certbot certificates)
-# if [[ $? != 0 ]]; then
-#     echo "Error listing certificates, assuming none installed"
-# else
-#     found_cert=false
-#     while read -r line; do
-#         case $line in
-#             *"Domains: "*"moszczynski.co.uk"*)
-#                 # Parsing a certificate that includes our domain
-#                 found_cert=true
-#                 ;;
-#             *"Domains: "*)
-#                 # Parsing a certificate that does not include our domain
-#                 found_cert=false
-#                 ;;
-#             *"Certificate Path:"*)
-#                 if [[ $found_cert == "true" ]]; then
-#                     cert_path=$(/usr/bin/sed -e 's/.*: \([^ ]*\).*/\1/g'<<< "$line")
-#                 fi
-#                 ;;
-#             *"Private Key Path:"*)
-#                 if [[ $found_cert == "true" ]]; then
-#                     key_path=$(/usr/bin/sed -e 's/.*: \([^ ]*\).*/\1/g'<<< "$line")
-#                 fi
-#                 ;;
-#         esac
-#     done <<< "$installed_certificates"
-#     if [[ -n "$cert_path" && -n "$key_path" ]]; then
-#         sed_script="${sed_script};s|FULLY_QUALIFIED_URL|$moszczynski.co.uk|g;s|RM_CERT|${cert_path}|g;s|RM_KEY|${key_path}|g"
-#         nginx_template="$script_dir/sms_core/nginx/ssl.sms.conf"
-#     fi
-# fi
+Search for an installed certificate for the constructed domain name
+installed_certificates=$(sudo /usr/bin/certbot certificates)
+if [[ $? != 0 ]]; then
+    echo "Error listing certificates, assuming none installed"
+else
+    found_cert=false
+    while read -r line; do
+        case $line in
+            *"Domains: "*"moszczynski.co.uk"*)
+                # Parsing a certificate that includes our domain
+                found_cert=true
+                ;;
+            *"Domains: "*)
+                # Parsing a certificate that does not include our domain
+                found_cert=false
+                ;;
+            *"Certificate Path:"*)
+                if [[ $found_cert == "true" ]]; then
+                    cert_path=$(/usr/bin/sed -e 's/.*: \([^ ]*\).*/\1/g'<<< "$line")
+                fi
+                ;;
+            *"Private Key Path:"*)
+                if [[ $found_cert == "true" ]]; then
+                    key_path=$(/usr/bin/sed -e 's/.*: \([^ ]*\).*/\1/g'<<< "$line")
+                fi
+                ;;
+        esac
+    done <<< "$installed_certificates"
+    if [[ -n "$cert_path" && -n "$key_path" ]]; then
+        sed_script="${sed_script};s|FULLY_QUALIFIED_URL|$moszczynski.co.uk|g;s|RM_CERT|${cert_path}|g;s|RM_KEY|${key_path}|g"
+        nginx_template="$script_dir/sms_core/nginx/ssl.sms.conf"
+    fi
+fi
 
 
 # Create copies of all configuration files needed with directory/user specifications changed as needed
