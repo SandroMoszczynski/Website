@@ -78,7 +78,7 @@ fi
 use_ssl=false
 nginx_template="$script_dir/sms_core/nginx/sms.conf"
 
-Search for an installed certificate for the constructed domain name
+#Search for an installed certificate for the constructed domain name
 installed_certificates=$(sudo /usr/bin/certbot certificates)
 if [[ $? != 0 ]]; then
     echo "Error listing certificates, assuming none installed"
