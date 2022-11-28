@@ -51,8 +51,6 @@ fi
 # Set up string replacements
 sed_script="s|ROOT_DIR|${repo_root}|g;s|CONFIG_DIR|${config_dir}|g;s|USER|${USER}|g;s|LOG_DIR|${log_dir}|g"
 
-# ccs-boot/ccs_init.py should have set up the virtual environment but reload in
-# case we are in a development environment and things have been manually changed
 
 echo "Setup venv"
 cd "${repo_root}"
@@ -112,7 +110,6 @@ else
     fi
 fi
 
-
 # Create copies of all configuration files needed with directory/user specifications changed as needed
 /usr/bin/sed -e "${sed_script}" "${nginx_template}" > "${config_dir}/nginx.sms.conf"
 if [[ $? != 0 ]]; then
@@ -162,7 +159,6 @@ sudo systemctl daemon-reload
 echo "Django managment"
 "${repo_root}/venv/bin/python" "${repo_root}/sms_core/manage.py" collectstatic --clear --no-input
 "${repo_root}/venv/bin/python" "${repo_root}/sms_core/manage.py" migrate
-/usr/bin/echo "{\"git_desc\":\"$(git -C "${repo_root}" describe --all --always)\",\"git_sha\":\"$(git -C "${repo_root}" rev-parse --verify HEAD)\",\"git_sha_short\":\"$(git -C "${repo_root}" rev-parse --verify --short HEAD)\"}" > "${repo_root}/sms_core/media/version.json"
 
 echo "Start services"
 sudo service nginx start
